@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>班の資料一覧</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", sans-serif;
+      background: linear-gradient(135deg, #f7f7f7, #ffffff);
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 26px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 18px;
+      color: #ffffff;
+      font-weight: 600;
+      text-align: center;
+      transition: transform .25s, box-shadow .25s, filter .25s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      backdrop-filter: blur(6px);
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+      filter: brightness(1.1);
+    }
+
+    .card-title {
+      color: black;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .desc {
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* 三原色カード */
+    .card1 { background: linear-gradient(135deg, #ff4d4d, #ff9999); }
+    .card2 { background: linear-gradient(135deg, #4d79ff, #99b3ff); }
+    .card3 { background: linear-gradient(135deg, #ffd24d, #ffe699); }
+    .card4 { background: linear-gradient(135deg, #9966ff, #bfa3ff); } /* 紫：赤+青 混色 */
+    .card5 { background: linear-gradient(135deg, #33cc33, #80d580); } /* 緑：青+黄 混色 */
+    .card6 { background: linear-gradient(135deg, #ff9933, #ffbf80); } /* オレンジ：赤+黄 混色 */
+
+
+
+
+
+    /* 小さなテクスチャ風アクセント（オプション） */
+    body::before {
+      content:"";
+      position:fixed;
+      top:0; left:0; width:100%; height:100%;
+      background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 1px, transparent 1px),
+                        radial-gradient(circle at 80% 80%, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size:50px 50px;
+      pointer-events:none;
+    }
+
+    @media (max-width:480px){
+      h1{font-size:20px;margin-bottom:18px;}
+      .card-title{font-size:16px;}
+    }
+
+  </style>
 </head>
 <body>
-    
+
+  <h1>発表資料を選択してください</h1>
+
+  <div class="grid">
+    <a href="ban1.html" class="card card1">
+      <div class="card-title">1班の資料はこちら</div>
+      <div class="desc">1班の配布資料を見る</div>
+    </a>
+
+    <a href="ban2.html" class="card card2">
+      <div class="card-title">2班の資料はこちら</div>
+      <div class="desc">2班の配布資料を見る</div>
+    </a>
+
+    <a href="ban3.html" class="card card3">
+      <div class="card-title">3班の資料はこちら</div>
+      <div class="desc">3班の配布資料を見る</div>
+    </a>
+
+    <a href="ban4.html" class="card card4">
+      <div class="card-title">4班の資料はこちら</div>
+      <div class="desc">4班の配布資料を見る</div>
+    </a>
+
+    <a href="ban5.html" class="card card5">
+      <div class="card-title">5班の資料はこちら</div>
+      <div class="desc">5班の配布資料を見る</div>
+    </a>
+
+    <a href="ban6.html" class="card card6">
+      <div class="card-title">6班の資料はこちら</div>
+      <div class="desc">6班の配布資料を見る</div>
+    </a>
+  </div>
+
 </body>
 </html>
